@@ -1,0 +1,61 @@
+.prabhak_parent {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  .prabhak_cont {
+    form {
+      .prabhak_input {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--unit) / 2);
+
+        input {
+          border-radius: calc(var(--unit) / 2);
+          padding: 8px 16px;
+          border: 1px solid rgba(0, 0, 0, 0.192);
+          width: 100%;
+          outline: none;
+        }
+      }
+    }
+
+    .data {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: var(--unit);
+
+      .card {
+        width: 250px;
+        height: auto;
+        background-color: white;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+        gap: 5px;
+
+        .urc_number {
+          width: 100%;
+          padding: 5px 0px;
+          border-bottom: 1px solid gray;
+        }
+        .age {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
