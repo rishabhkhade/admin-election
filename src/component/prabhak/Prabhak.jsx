@@ -5,7 +5,6 @@ import axios from "axios";
 
 const Prabhak = () => {
   const [prabhakList, setPrabhakList] = useState([]);
-  const [candidateData, setCandidateData] = useState([]);
   const [prabhakName, setPrabhakName] = useState("");
 
   //add prabhak
@@ -27,8 +26,9 @@ const Prabhak = () => {
     e?.preventDefault();
     try {
       const response = await axios.get(
-        `${import.meta.env.REACT_APP_PORT_BACKEND}prabhak/getAll`
+        `${process.env.REACT_APP_PORT_BACKEND}prabhak/getAll`
       );
+      console.log(response, ">>response");
 
       setPrabhakList(response.data.data);
     } catch (error) {
@@ -49,29 +49,27 @@ const Prabhak = () => {
               <label htmlFor="">Prabhak</label>
               <input
                 type="text"
-                placeholder="prabhak"
+                placeholder="add prabhak number"
                 value={prabhakName}
                 onChange={(e) => setPrabhakName(e.target.value)}
               />
             </div>
 
-            <div className="btn" type="submit">
+            <div className="btn" style={{width: "fit-content"}} type="submit">
               Submit
             </div>
           </form>
 
           <div className="data">
-            {candidateData?.length > 0 ? (
-              candidateData.map((item, index) => (
+            {prabhakList?.length > 0 ? (
+              prabhakList.map((item, index) => (
                 <div className="card" key={index}>
-                  <p className="urc_number">{item?.urcNumber}</p>
-                  <p>मतदाराचे पूर्ण नाव : {item?.votermarathiName}</p>
-                  <p>वडिलांचे नाव : {item?.voterFatherName}</p>
-                  <p>घर क्रमांक : {item?.housenumber}</p>
-                  <div className="age">
-                    <p>वय : {item?.age}</p>
-                    <p>लिंग : {item?.gender}</p>
-                  </div>
+                  <p>
+                    <strong>ID:</strong> {item?.id}
+                  </p>
+                  <p>
+                    <strong>प्रभाग:</strong> {item?.prabhakNo}
+                  </p>
                 </div>
               ))
             ) : (

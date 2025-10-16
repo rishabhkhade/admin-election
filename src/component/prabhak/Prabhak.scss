@@ -7,7 +7,13 @@
   align-items: center;
   height: auto;
   .prabhak_cont {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--unit) * 3);
     form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--unit);
       .prabhak_input {
         display: flex;
         flex-direction: column;
@@ -40,7 +46,7 @@
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        justify-content:center;
+        justify-content: center;
         align-items: flex-start;
         gap: 5px;
 
