@@ -10,58 +10,46 @@
     display: flex;
     flex-direction: column;
     gap: calc(var(--unit) * 3);
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: var(--unit);
-      .prabhak_input {
-        display: flex;
-        flex-direction: column;
-        gap: calc(var(--unit) / 2);
+    width: 100%;
 
-        input {
-          border-radius: calc(var(--unit) / 2);
-          padding: 8px 16px;
-          border: 1px solid rgba(0, 0, 0, 0.192);
-          width: 100%;
-          outline: none;
+    .add-prabhak {
+      display: flex;
+      gap: var(--unit);
+      align-items: center;
+
+      input {
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.116);
+        padding: 6px 12px;
+            outline: none;
+      }
+
+      .btn22 {
+        width: auto;
+        background-color: var(--accent);
+        padding: 8px 16px;
+        color: var(--white);
+        border-radius: 6px;
+        border: 1px solid var(--accent);
+        transition: var(--trans-q);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 400;
+        height: 40px;
+    
+
+        &:hover {
+          border: 1px solid var(--white);
+          color: var(--white);
         }
       }
     }
 
-    .data {
+    .table {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: var(--unit);
-
-      .card {
-        width: 250px;
-        height: auto;
-        background-color: white;
-        border: 1px solid black;
-        padding: 10px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 5px;
-
-        .urc_number {
-          width: 100%;
-          padding: 5px 0px;
-          border-bottom: 1px solid gray;
-        }
-        .age {
-          display: flex;
-          width: 100%;
-          justify-content: space-between;
-          align-items: center;
-        }
-      }
     }
   }
 }
